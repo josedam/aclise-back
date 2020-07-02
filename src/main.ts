@@ -12,7 +12,7 @@ async function bootstrap() {
   
   if( process.env.NODE_ENV === 'development') {
     app.enableCors();
-    logger.log('Application CORS Enabled');
+    logger.log('Application CORS Enabled ');
   } else {
     app.enableCors({ origin: serverConfig.origin });
     logger.log(`Applicacion CORS accept from [${serverConfig.origin}]`);

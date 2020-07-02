@@ -22,6 +22,12 @@ export class User {
     @Column('varchar', {length: 30, default: UserRol.USER})
     rol: UserRol;
 
+    @Column()
+    fullname: string;
+
+    @Column()
+    email: string;
+
     @OneToMany(type => Task, task => task.user, {eager: true})
     tasks: Task[]; 
 
